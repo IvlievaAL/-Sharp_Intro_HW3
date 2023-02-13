@@ -21,9 +21,9 @@ while (index>=0)
       Ndivided=Ndivided/10;
       index=index-1;
    }
-if (Ndigits<3)
+if (Ndigits<5|Ndigits>5)
   {
-    System.Console.WriteLine("No third digit");
+    System.Console.WriteLine("Enter 5-digits number");
   }
 else 
   {
