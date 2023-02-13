@@ -1,5 +1,5 @@
-﻿// задача19. на вход - 5значное число. Проверить, является ли оно палиндромом.
-System.Console.WriteLine("Enter number: ");
+﻿// задача19. на вход - 5значное число. Проверить, является ли оно палиндромом: 12321 и т.п.
+System.Console.WriteLine("Enter number: "); //решение для простых чисел
 string StrN = System.Console.ReadLine();
 int number = Convert.ToInt32(StrN);
 int absnumber=Math.Abs(number);
@@ -27,7 +27,24 @@ if (Ndigits<5|Ndigits>5)
   }
 else 
   {
-    System.Console.WriteLine(arrayN[2]);
+    index=0;
+    int reverseindex=Ndigits-1;
+    int count=0;
+    if (arrayN[index]<arrayN[reverseindex]|arrayN[index]>arrayN[reverseindex])
+      {
+       System.Console.WriteLine("No, it is not a palindrom");
+      }
+    else 
+      {
+        index++;
+        reverseindex=reverseindex-1;
+        if (arrayN[index]<arrayN[reverseindex]|arrayN[index]>arrayN[reverseindex])
+         {
+          System.Console.WriteLine("No, it is not a palindrom");
+         }
+        else 
+          {
+            System.Console.WriteLine("Yes, it is a palindrom");
+          }
+      }
   }
-   //var str = string.Join(" , ", arrayN);
-   //Console.WriteLine(str); полезная комбинация, выводит в консоль весь массив
