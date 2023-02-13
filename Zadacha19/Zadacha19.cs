@@ -29,7 +29,6 @@ else
   {
     index=0;
     int reverseindex=Ndigits-1;
-    int count=0;
     if (arrayN[index]<arrayN[reverseindex]|arrayN[index]>arrayN[reverseindex])
       {
        System.Console.WriteLine("No, it is not a palindrom");
