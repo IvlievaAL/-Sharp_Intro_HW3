@@ -20,10 +20,11 @@ if (N>0)
   }
 else 
   {
-   int [] Array1toN=new int [Math.Abs(N)+1];
-   int index=1;
+   int [] Array1toN=new int [Math.Abs(N)+2]; //два места добавлено для кубов 1 и 0
+   int index=2; //элемент с индексом 0 уже равен 0, т.к. свежий массив полон нулей
    int CurrentNumber=-1;
-   while (index<Math.Abs(N)+1) 
+   Array1toN[0]=1; //это куб единицы
+   while (index<Math.Abs(N)+2) 
      {
       Array1toN[index]=CurrentNumber*CurrentNumber*CurrentNumber;
       CurrentNumber=CurrentNumber-1;
